@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search Dramas</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
+</head>
+
+<body>
+<div class="pattern"></div>
+
+<div id="header">
+<h1> Search Dramas </h1>
+</div>
+
+<div id="buttons">
+<a href="{{ url_for('index') }}" class="myButton">⌂ HOME </a>
+<a href="{{ url_for('search') }}" class="myButton"> SEARCH </a>
+<a href="{{ url_for('directory') }}" class="myButton"> DIRECTORY </a>
+<div id="buttons">
+
+
+<div id="container">
+
+<div>
+<h2 id="search_title"> Search Dramas By: <mark> Title </mark> </h2>
+<p id="info">
+<ol>
+	<li id="search_li"> Put an underscore, <mark id="search_mark">_</mark> ,for spaces and dashes in drama titles you want to search. </li>
+	<li id="search_li"> Not case sensitive. </li>
+	<li id="search_li"> Returns list of dramas containing the title/words inputed. </li>
+	<li id="search_li"> Example: <a href="tientl.com/kdramas/title/vincenzo">tientl.com/kdramas/<mark id="search_mark">title/vincenzo</mark> </li></a>
+<ol>
+</p>
+</div>
+
+<div>
+<h2 id="search_title"> Search Dramas By: <mark> Genre </mark> </h2>
+<p id="info">
+<ol>
+	<li id="search_li"> Put an underscore, <mark id="search_mark">_</mark> ,for spaces and dashes in drama genres you want to search. </li>
+	<li id="search_li"> Not case sensitive. </li>
+	<li id="search_li"> Some genres include: Comedy, Romantic comedy, Crime, Fantasy, Business, Coming of age, Zombie, Family, Legal </li>
+	<li id="search_li"> Example: <a href="tientl.com/kdramas/genre/comedy">tientl.com/kdramas/<mark id="search_mark">genre/comedy</mark> </li></a>
+<ol>
+</p>
+</div>
+
+<div>
+<h2 id="search_title"> Search Dramas By: <mark> Rating </mark> </h2>
+<p id="info">
+<ol>
+	<li id="search_li"> Put a whole number between 0 and 10. </li>
+	<li id="search_li"> If you submit 7, it will return every drama rated from 7 to 7.9 </li>
+	<li id="search_li"> Example: <a href="tientl.com/kdramas/rating/7">tientl.com/kdramas/<mark id="search_mark">rating/7</mark> </li></a>
+<ol>
+</p>
+</div>
+
+<div>
+<h2 id="search_title"> Search Dramas By: <mark> Actor <mark> </h2>
+	<p id="info">
+	<ol>
+		<li id="search_li"> Put an underscore, <mark id="search_mark">_</mark> ,for spaces and dashes in actor name. </li>
+		<li id="search_li"> Not case sensitive </li>
+		<li id="search_li"> Returns list of dramas containing the actor/words inputed. (ie. if you input the word "Kim", all dramas with actors with the last name Kim would appear)</li>
+		<li id="search_li"> Example: Search for Kim Seon-Ho: <a href="tientl.com/kdramas/actor/kim_seon_ho">tientl.com/kdramas/<mark id="search_mark">actor/kim_seon_ho</mark> </li></a>
+	<ol>
+	</p>
+</div>
+
+<div>
+<h2 id="search_title"> Search Dramas By: <mark> Year </mark> </h2>
+<p id="info">
+<ol>
+	<li id="search_li"> Input any year. Returns dramas that were released that year, if available. </li>
+	<li id="search_li"> Example: <a href="tientl.com/kdramas/year/2020">tientl.com/kdramas/<mark id="search_mark">year/2020</mark> </li></a>
+<ol>
+</p>
+</div>
+
+<div id="buttons">
+<a href="{{ url_for('index') }}" class="myButton">⌂ HOME </a>
+<a href="{{ url_for('search') }}" class="myButton"> SEARCH </a>
+<a href="{{ url_for('directory') }}" class="myButton"> DIRECTORY </a>
+<div id="buttons">
+
+</div>
+
+</body>
+
+</html>

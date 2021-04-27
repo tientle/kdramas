@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drama Directory</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
+</head>
+
+<body>
+
+<div id="container">
+
+	<div id="buttons">
+	<a href="{{ url_for('index') }}" class="myButton">⌂ HOME </a>
+	<a href="{{ url_for('search') }}" class="myButton"> SEARCH </a>
+	<a href="{{ url_for('directory') }}" class="myButton"> DIRECTORY </a>
+	<div id="buttons">
+
+<div id="header">
+<h1> Drama Directory </h1>
+</div>
+
+<p id="info">
+ Scroll through 1,352 K-Dramas.
+ Dramas are indexed beginning from 0.
+</p>
+
+<table>
+  <tr> <td> ID </td> <td> Name </td>
+  </tr>
+    {% for drama in drama_dict_list %}
+    <tr>
+      <td> {{drama['id']}} </td>
+    <td> <a href=" {{ url_for('drama', id=drama['id']) }}"> {{drama['name']}} </a> </td>
+     </tr>
+    {% endfor %}
+</table>
+
+
+<div id="buttons">
+<a href="{{ url_for('index') }}" class="myButton">⌂ HOME </a>
+<a href="{{ url_for('search') }}" class="myButton"> SEARCH </a>
+<a href="{{ url_for('directory') }}" class="myButton"> DIRECTORY </a>
+<div id="buttons">
+
+</div>
+
+</body>
+</html>

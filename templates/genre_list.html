@@ -1,0 +1,55 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+{{ super() }}
+	<style>
+		body { background: #ffebeb; }
+	</style>
+{% endblock %}
+
+
+{% block title %}
+Sock Style List
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="row pb-5">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+      <h1 class="pt-5 pb-2 text-center">List of K-Dramas</h1>
+
+      <p class="lead alert alert-info">This is a list of all the K-drama genres containing:
+			<strong>{{ genre }}</strong>.</p>
+
+			<p class="ml-4"><a href="{{ url_for('index') }}">⌂ HOME</a></p>
+			<p class="ml-4"><a href="{{ url_for('search') }}">SEARCH</a></p>
+			<p class="ml-4"><a href="{{ url_for('directory') }}">DIRECTORY</a></p>
+
+
+		<table class="table">
+			<tr>
+				<th> Name</th>
+        <th> ID </th>
+        <th> Genre </th>
+        <th> Rating</th>
+			</tr>
+
+			<!-- here is a for-loop to give us all the socks -->
+			{% for genre in genres %}
+			<tr>
+				<td>{{ genre.name }}</td>
+        <td>{{ genre.id }}</td>
+        <td>{{ genre.genre }}</td>
+        <td>{{ genre.rating }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+		</div>
+	</div>
+</div>
+
+{% endblock %}

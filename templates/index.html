@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beginner's Guide to K-Dramas</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/main.css">
+</head>
+
+<body>
+<div class="pattern"></div>
+
+<div id="header">
+<h1> A Guide to Korean Dramas </h1>
+</div>
+
+<div id="container">
+
+<div id="buttons">
+<a href="{{ url_for('index') }}" class="myButton">⌂ HOME </a>
+<a href="{{ url_for('search') }}" class="myButton"> SEARCH </a>
+<a href="{{ url_for('directory') }}" class="myButton"> DIRECTORY </a>
+<div id="buttons">
+
+<div id="home_info">
+	<h2 id="home_title"> What is a K-Drama? </h2>
+	<p id="info"> A Korean drama, also known as a K-Drama, are series that are in the Korean language and are made in South Korea. They can be streamed on services such as Netflix and Viki with subtitles for everyone to watch. </p>
+<div>
+
+<div id="home_info">
+	<h2 id="home_title"> The Rise of K-Dramas </h2>
+	<!-- ## embed html ## -->
+
+	<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0740gt","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=US&q=%2Fm%2F0740gt&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+
+	<p id="google_caption"> A Google Trends chart showing the frequence of Google searches for 'Korean Drama' over the past 12 months. <p>
+<div>
+
+<div id="home_info">
+	<h2 id="home_title"> Reccomendations For New Viewers </h2>
+	<ul>
+		<li id="search_li"> <p id="info"> If you like romance, check out:
+			 <a href="{{ url_for('drama', id=193)}}" > Crash Landing on You </a> </p> </li>
+		<li id="search_li"> <p id="info"> If you like action, check out:
+			<a href="{{ url_for('drama', id=1259)}}" > Vincenzo </a> </p> </li>
+		<li id="search_li"> <p id="info"> If you like superheros, check out:
+				<a href="{{ url_for('drama', id=1030)}}" > Strong Woman Do Bong-soon </a> </p> </li>
+		<li id="search_li"> <p id="info"> If you like technology, check out:
+					<a href="{{ url_for('drama', id=1024)}}" > Start Up </a> </p> </li>
+	<ul>
+<div>
+
+	<div id="buttons">
+	<a href="{{ url_for('index') }}" class="myButton">⌂ HOME </a>
+	<a href="{{ url_for('search') }}" class="myButton"> SEARCH </a>
+	<a href="{{ url_for('directory') }}" class="myButton"> DIRECTORY </a>
+	<div id="buttons">
+
+
+</div>
+
+</body>
+
+<footer> Made by Tien Le. View the GitHub repo for this page here. </footer>
+
+</html>

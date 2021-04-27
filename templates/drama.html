@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ drama["name"]}}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="drama_header">
+<h1> {{drama["name"]}} </h1>
+</div>
+
+
+
+<img src="{{ url_for('static', filename='/images/' + drama['image_name']) }}" alt="Drama Poster" class="center">
+
+<p id="info">
+	<ul>
+		<li> <mark> Plot </mark> <p id=drama_info> {{ drama["plot"] }} </p> </li>
+		<li> <mark>Genre(s) </mark> <p id=drama_info> {{ drama["genre"] }} </p> </li>
+		<li> <mark>Starring </mark> <p id=drama_info> {{ drama["starring"] }} </p> </li>
+		<li> <mark>Number of Episodes </mark> <p id=drama_info> {{ drama["num_episodes"] }} </p> </li>
+		<li> <mark>Release Year </mark> <p id=drama_info> {{ drama["release_year"] }} </p> </li>
+		<li> <mark>Rating </mark> <p id=drama_info> {{ drama["rating" ]}} </p> </li>
+	</ul>
+
+	<p id="wiki"> Visit the Wikipedia page <a href="{{drama["url"]}}" target="_blank">here</a>.</p>
+</p>
+
+<p id="disclaimer"> Disclaimer: Not all information is available. Unavailable information will either show up blank or as N/A. </p>
+
+<div id="buttons">
+<a href="{{ url_for('index') }}" class="myButton">⌂ HOME </a>
+<a href="{{ url_for('search') }}" class="myButton"> SEARCH </a>
+<a href="{{ url_for('directory') }}" class="myButton"> DIRECTORY </a>
+<div id="buttons">
+
+
+
+
+
+</div>
+
+</body>
+</html>

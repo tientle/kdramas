@@ -44,9 +44,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   	top:1px;
   }
 
-#buttons {
+/* #buttons {
   text-align: center;
-}
+} */
 
 #google_caption {
   font-size: 15px;

@@ -8,6 +8,8 @@ from sqlalchemy import desc
 import csv
 
 app = Flask(__name__)
+application = app
+
 app.config['SECRET_KEY'] = 'gV6Crpsy4D'
 
 Bootstrap(app)
@@ -52,9 +54,6 @@ class Drama(db.Model):
     rating = db.Column(db.String)
 #
 
-class TitleForm(FlaskForm):
-    title = StringField('Input Title Search:', validators=[DataRequired()])
-    submit = SubmitField('Submit')
 
 @app.route('/title/<title>')
 def searchTitle(title):

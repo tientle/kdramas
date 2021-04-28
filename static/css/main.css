@@ -183,12 +183,12 @@ a:hover {
 
 
 footer {
-  bottom: 0;
   background-color: #ffebeb;
+  margin: 0;
+  margin: auto;
   text-align: center;
   font-size: 15px;
-  margin: 0;
-  margin-top: 10px;
+  width: auto;
 }
 
 ul, li {
@@ -233,30 +233,62 @@ mark {
 }
 
 /* media queries */
-@media screen and ( max-width: 700px ) {
+@media screen and ( max-width: 600px ) {
+
+#drama_header {
+  margin: auto;
+}
+
+#home_title {
+  margin: auto;
+}
 
 body {
-  background: #e8bdb0;
-  font-size: 20px;
+  background: #fff;
+  font-size: 15px;
+  margin: auto;
 }
 
-#welcome {
-  font-size: 25px;
+div {
+  margin: auto;
 }
 
-  h1 {
+#search_mark {
+  background: rgba(255,0,0,.2);
+  color: #ff0064;
+  font-weight: none;
+  font-size: 13px;
+  text-transform: none;
+}
+
+mark {
+  font-size: 15px;
+}
+
+ul, li {
+   font-size: 15px;
+ }
+
+div {
+  margin: auto;
+}
+
+
+h1 {
       font-size: 33px;
       text-align: center;
   }
 
-    #container {
-      max-width: 600px;
-      padding-top: 30px;
-      margin: 10px auto;
-    }
+footer {
+  margin: auto;
+  padding: 20px;
+}
 
- a.button1{
-  display:block;
-  margin:0.4em auto;
- }
+#container {
+      margin: auto;
+      border: none;
+}
+
+#buttons {
+  margin: auto;
 }

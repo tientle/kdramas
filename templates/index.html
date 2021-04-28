@@ -24,6 +24,11 @@
 <a href="{{ url_for('directory') }}" class="myButton"> DIRECTORY </a>
 <div id="buttons">
 
+	<div id="home_info">
+		<h2 id="home_title"> About </h2>
+		<p id="info"> This app was created for those who are new and want to explore K-Dramas or for those who have watched K-Dramas before and want to find a new one to watch. You can search for dramas and you can look through the directory that contains all dramas from the database. The database was creating by scraping Wikipedia and IMDB. </p>
+	<div>
+
 <div id="home_info">
 	<h2 id="home_title"> What is a K-Drama? </h2>
 	<p id="info"> A Korean drama, also known as a K-Drama, are series that are in the Korean language and are made in South Korea. They can be streamed on services such as Netflix and Viki with subtitles for everyone to watch. </p>
@@ -39,7 +44,7 @@
 <div>
 
 <div id="home_info">
-	<h2 id="home_title"> Reccomendations For New Viewers </h2>
+	<h2 id="home_title"> Recommendations For New Viewers </h2>
 	<ul>
 		<li id="search_li"> <p id="info"> If you like romance, check out:
 			 <a href="{{ url_for('drama', id=193)}}" > Crash Landing on You </a> </p> </li>
@@ -50,19 +55,19 @@
 		<li id="search_li"> <p id="info"> If you like technology, check out:
 					<a href="{{ url_for('drama', id=1024)}}" > Start Up </a> </p> </li>
 	<ul>
-<div>
 
 	<div id="buttons">
 	<a href="{{ url_for('index') }}" class="myButton">⌂ HOME </a>
 	<a href="{{ url_for('search') }}" class="myButton"> SEARCH </a>
 	<a href="{{ url_for('directory') }}" class="myButton"> DIRECTORY </a>
-	<div id="buttons">
-
+</div>
 
 </div>
 
+<footer> Made by Tien Le. View the GitHub repo for this page <a href="https://github.com/tientle/kdramas">here</a>. </footer>
+
+
 </body>
 
-<footer> Made by Tien Le. View the GitHub repo for this page here. </footer>
 
 </html>

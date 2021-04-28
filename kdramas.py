@@ -52,7 +52,14 @@ class Drama(db.Model):
     release_year = db.Column(db.Integer)
     plot = db.Column(db.Text)
     rating = db.Column(db.String)
-#
+
+def page_not_found(e):
+  return render_template('404.html'), 404
+
+def create_app(config_filename):
+    app = Flask(__name__)
+    app.register_error_handler(404, page_not_found)
+    return app
 
 
 @app.route('/title/<title>')
